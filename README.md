@@ -1,3 +1,29 @@
+# Установка и запуск
+
+### Wsl среда или Ubuntu
+```sh
+composer install
+cp .env.example .env
+docker run --rm \
+    -v $(pwd):/opt \
+    -w /opt \
+    composer:latest \
+    bash -c "composer install"
+docker-compose build
+docker-compose up
+```
+
+### Контейнер laravel.test
+```sh
+php artisan key:generate
+php artisan migrate
+```
+
+### Запуск среды
+```sh
+docker-compose up
+```
+
 # Тестовое задание для metrika72.ru
 
 Пользователь заполняет форму обращения к директору. Обращение сохраняется на бэкенде в базу, после чего отправляется на почту директору.
