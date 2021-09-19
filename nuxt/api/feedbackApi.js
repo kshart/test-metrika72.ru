@@ -19,7 +19,7 @@ export default {
     })
       .then((response) => {
         if (!response.ok) {
-          if (response.status === 409) {
+          if (response.status === 302) {
             const error = new Error('Ошибка при отправке запроса')
             error.isUniqueError = true
             throw error
