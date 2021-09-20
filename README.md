@@ -2,7 +2,6 @@
 
 ### Wsl среда или Ubuntu
 ```sh
-composer install
 cp .env.example .env
 docker run --rm \
     -v $(pwd):/opt \
